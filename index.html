@@ -3,145 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradeFlow - Smart Trading</title>
-    <link rel="stylesheet" href="style.css">
+
+    <title>My Prompt Assistant</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 10px;
+            color: #d1d5db;
+        }
+
+        main {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            height: 180px;
+            padding: 15px;
+            box-sizing: border-box;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            resize: vertical;
+            font-size: 16px;
+        }
+
+        .price {
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: #111827;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #374151;
+        }
+
+        .notice {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f3f4f6;
+            border-radius: 10px;
+            font-size: 14px;
+            color: #4b5563;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #6b7280;
+        }
+    </style>
 </head>
 
 <body>
 
-<header class="navbar">
-    <div class="logo">Trade<span>Flow</span></div>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#markets">Markets</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="nav-buttons">
-        <button class="login-btn">Log In</button>
-        <button class="signup-btn">Create Account</button>
-    </div>
+<header>
+    <h1>My Prompt Assistant</h1>
+    <p>Send your request and get professional assistance.</p>
 </header>
 
 <main>
 
-    <section id="home" class="hero">
-        <div class="hero-text">
-            <p class="tag">SMARTER • FASTER • SIMPLER</p>
+    <label for="prompt">What would you like help with?</label>
 
-            <h1>
-                Trade smarter.<br>
-                <span>Grow your strategy.</span>
-            </h1>
+    <textarea
+        id="prompt"
+        placeholder="Write your prompt here...">
+    </textarea>
 
-            <p class="description">
-                A modern trading platform designed to help you
-                monitor markets, manage your portfolio and make
-                informed decisions.
-            </p>
+    <div class="price">
+        Service price: KSh 100
+    </div>
 
-            <div class="hero-buttons">
-                <button class="primary-btn">Get Started</button>
-                <button class="secondary-btn">Explore Markets</button>
-            </div>
-        </div>
+    <button onclick="submitPrompt()">
+        PAY & SEND PROMPT
+    </button>
 
-        <div class="market-card">
-            <div class="card-header">
-                <div>
-                    <small>Portfolio Balance</small>
-                    <h2>$12,480.50</h2>
-                </div>
-                <span class="profit">+8.42%</span>
-            </div>
-
-            <div class="chart">
-                <div class="chart-line"></div>
-            </div>
-
-            <div class="stats">
-                <div>
-                    <small>Today's Profit</small>
-                    <strong>+$420.80</strong>
-                </div>
-
-                <div>
-                    <small>Active Assets</small>
-                    <strong>12</strong>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="markets" class="markets">
-        <p class="tag">MARKETS</p>
-        <h2>Explore the market</h2>
-
-        <div class="market-grid">
-
-            <div class="asset-card">
-                <span>BTC</span>
-                <h3>Bitcoin</h3>
-                <p>$68,420.25</p>
-                <strong>+2.84%</strong>
-            </div>
-
-            <div class="asset-card">
-                <span>ETH</span>
-                <h3>Ethereum</h3>
-                <p>$3,420.18</p>
-                <strong>+1.92%</strong>
-            </div>
-
-            <div class="asset-card">
-                <span>EUR</span>
-                <h3>EUR / USD</h3>
-                <p>1.1684</p>
-                <strong>+0.42%</strong>
-            </div>
-
-            <div class="asset-card">
-                <span>GOLD</span>
-                <h3>Gold</h3>
-                <p>$3,245.80</p>
-                <strong>+0.76%</strong>
-            </div>
-
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <p class="tag">WHY TRADEFLOW?</p>
-        <h2>Everything you need in one place.</h2>
-
-        <div class="features">
-
-            <div>
-                <h3>📊 Market Insights</h3>
-                <p>Monitor market information through a clean dashboard.</p>
-            </div>
-
-            <div>
-                <h3>🔒 Secure Account</h3>
-                <p>Keep your account protected with secure authentication.</p>
-            </div>
-
-            <div>
-                <h3>📱 Anywhere Access</h3>
-                <p>Use the platform comfortably on desktop or mobile.</p>
-            </div>
-
-        </div>
-    </section>
+    <div class="notice">
+        Your request will be processed after payment confirmation.
+        Payments will be handled through an official payment integration.
+    </div>
 
 </main>
 
-<footer id="contact">
-    <div class="logo">Trade<span>Flow</span></div>
-    <p>© 2026 TradeFlow. Educational demonstration platform.</p>
+<footer>
+    © 2026 My Prompt Assistant
 </footer>
+
+<script>
+    function submitPrompt() {
+
+        const prompt = document.getElementById("prompt").value.trim();
+
+        if (prompt === "") {
+            alert("Please enter your prompt first.");
+            return;
+        }
+
+        alert("Your prompt has been received. Payment integration will be added next.");
+    }
+</script>
 
 </body>
 </html>
